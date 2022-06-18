@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
 /* font-family: 'Red Hat Display', sans-serif; */
 
 :root {
@@ -11,6 +11,9 @@
     --very-pale-blue: hsl(225, 100%, 98%);
     --desaturated-blue: hsl(224, 23%, 55%);
     --dark-blue: hsl(223, 47%, 23%);
+
+    /* Other */
+    --bright-blue-hover: hsl(245, 67%, 66%);
 
     /************************ Typography ********************************/
     /* Body Copy */
@@ -48,9 +51,11 @@ main {
     /* background-color: rgb(216, 144, 57); */
     /* background-color: var(--very-pale-blue); */
     background-color: white;
-    width: 370px;
+    width: 400px;
     border-radius: 15px;
     text-align: center;
+    /* border: 1.2px hsl(226, 78%, 95%) solid; */
+    box-shadow: 0px 0 10px 2px hsl(210, 15%, 79%);
 }
 
 @media (max-width:400px) {
@@ -79,8 +84,9 @@ main {
     color: var(--dark-blue);
 
     font-family: var(--font-family-type);
+
     font-size: var(--font-size-paragraph);
-    margin: 0 20px;
+    margin: 0 25px;
     line-height: 1.5;
 }
 
@@ -92,14 +98,14 @@ main {
 
 .text-container p {
     color: var(--desaturated-blue);
+    font-weight: var(--weight-3);
 }
 
 /************** Button Container **********************/
 .button-container {
     /* background-color: rgba(173, 190, 61, 0.778); */
-
     font-family: var(--font-family-type);
-    margin: 0 20px;
+    margin: 0 35px;
 }
 
 /****** Payment plan**********/
@@ -137,12 +143,13 @@ main {
     margin-top: 0px;
     margin-bottom: 0px;
     color: var(--dark-blue);
+    font-weight: var(--weight-1);
 }
 
 .payment-plan .amount p {
     font-size: var(--font-size-paragraph);
     color: var(--desaturated-blue);
-
+    font-weight: var(--weight-3);
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -150,7 +157,6 @@ main {
 .payment-plan .amount div {
     position: absolute;
     float: left;
-    /* background-color: rgb(119, 0, 255); */
     width: 60px;
     top: 0;
     right: 0px;
@@ -163,22 +169,49 @@ main {
 .payment-plan .amount a {
     font-size: var(--font-size-paragraph);
     color: var(--bright-blue);
+    font-weight: var(--weight-2);
+    text-decoration: none;
 
 }
 
+.payment-plan .amount a:hover {
+    color: var(--bright-blue-hover);
+}
+
 /****** Payment Process**********/
+#procees {
+    text-decoration: none;
+}
+
 .payment-procees {
     /* background-color: blue; */
     background-color: var(--bright-blue);
     color: var(--very-pale-blue);
+    text-decoration: none;
     border-radius: 10px;
     box-shadow: -5px 10px 18px 2px rgb(187, 185, 185);
     padding: 12px 0px;
     margin: 30px 0;
+    font-weight: var(--weight-2);
+}
+
+.payment-procees:hover {
+    background-color: var(--bright-blue-hover);
+    color: var(--paleblue);
+    text-decoration: none;
 }
 
 /****** Payment Cancel**********/
+#cancel {
+    text-decoration: none;
+}
+
 .payment-cancel {
     margin-bottom: 25px;
     color: var(--desaturated-blue);
+    font-weight: var(--weight-2);
+}
+
+.payment-cancel:hover {
+    color: var(--dark-blue);
 }
